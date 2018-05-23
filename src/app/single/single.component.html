@@ -1,0 +1,47 @@
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Page Heading -->
+  <h1 class="my-4">Нерухомість #{{estate.id}}
+    <small>{{estate.name}}</small>
+  </h1>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="#">
+          <img class="card-img-top" src="https://picsum.photos/700/400/?random" alt="">
+        </a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">{{estate.name}}</a>
+          </h4>
+          <p class="card-text">
+            {{estate.description}}
+            <ul>
+              <li>Місто: {{estate.city}}</li>
+              <li>Вулиця: {{estate.street}}</li>
+              <li>Будинок: {{estate.house}}</li>
+              <li>Квартира: {{estate.flat}}</li>
+              <li>Поверх: {{estate.floor}}</li>
+              <li>Кімнат: {{estate.rooms}}</li>
+              <li>Тип планування: {{estate.roomstype}}</li>
+              <li>Площа: {{estate.areaall}}</li>
+              <li>Площа кімнат: {{estate.arearooms}}</li>
+              <li>Площа кухні: {{estate.areakitchen}}</li>
+              <li>Підлога: {{estate.flooring}}</li>
+              <li>Висота: {{estate.height}}</li>
+              <li>Вид: {{estate.layout}}</li>
+              <li>Ремонт: {{estate.repair}}</li>
+              <li>Отоплення: {{estate.heating}}</li>
+              <li>Підлога: {{estate.flooring}}</li>
+              <li>Меблі: {{estate.furniture}}</li>
+              <li>Ціна: {{estate.price}}</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
