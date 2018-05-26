@@ -2,41 +2,42 @@
 <div class="container">
 
   <!-- Page Heading -->
-  <h1 class="my-4">Нерухомість #{{estate.id}}
-    <small>{{estate.name}}</small>
+  <h1 class="my-4">Нерухомість {{estate.name}}
+    <br>
+    <small>#{{estate.id}}</small>
   </h1>
   <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
       <div class="card h-100">
-        <a href="#">
-          <img class="card-img-top" src="https://picsum.photos/700/400/?random" alt="">
+
+        <a href="/edit/{{estate.id}}">
+          <button type="button" class="btn btn-primary btn-block">Редагувати</button>
         </a>
+        <a href="/delete/{{estate.id}}">
+          <button type="button" class="btn btn-danger btn-block">Видалити</button>
+        </a>
+        <img class="card-img-top" class="img-thumbnail" src="https://picsum.photos/700/400/?random" alt="">
         <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">{{estate.name}}</a>
-          </h4>
-          <p class="card-text">
-            {{estate.description}}
-            <ul>
-              <li>Місто: {{estate.city}}</li>
-              <li>Вулиця: {{estate.street}}</li>
-              <li>Будинок: {{estate.house}}</li>
-              <li>Квартира: {{estate.flat}}</li>
-              <li>Поверх: {{estate.floor}}</li>
-              <li>Кімнат: {{estate.rooms}}</li>
-              <li>Тип планування: {{estate.roomstype}}</li>
-              <li>Площа: {{estate.areaall}}</li>
-              <li>Площа кімнат: {{estate.arearooms}}</li>
-              <li>Площа кухні: {{estate.areakitchen}}</li>
-              <li>Підлога: {{estate.flooring}}</li>
-              <li>Висота: {{estate.height}}</li>
-              <li>Вид: {{estate.layout}}</li>
-              <li>Ремонт: {{estate.repair}}</li>
-              <li>Отоплення: {{estate.heating}}</li>
-              <li>Підлога: {{estate.flooring}}</li>
-              <li>Меблі: {{estate.furniture}}</li>
-              <li>Ціна: {{estate.price}}</li>
-            </ul>
+          <ul class="list-group">
+            <li class="list-group-item">Місто: {{estate.city}}</li>
+            <li class="list-group-item">Вулиця: {{estate.street}}</li>
+            <li class="list-group-item">Будинок: {{estate.house}}</li>
+            <li class="list-group-item">Квартира: {{estate.flat}}</li>
+            <li class="list-group-item">Поверх: {{estate.floor}}</li>
+            <li class="list-group-item">Кімнат: {{estate.rooms}}</li>
+            <li class="list-group-item">Тип планування: {{estate.roomstype}}</li>
+            <li class="list-group-item">Площа: {{estate.areaall}}</li>
+            <li class="list-group-item">Площа кімнат: {{estate.arearooms}}</li>
+            <li class="list-group-item">Площа кухні: {{estate.areakitchen}}</li>
+            <li class="list-group-item">Підлога: {{estate.flooring}}</li>
+            <li class="list-group-item">Висота: {{estate.height}}</li>
+            <li class="list-group-item">Вид: {{estate.layout}}</li>
+            <li class="list-group-item">Ремонт: {{estate.repair}}</li>
+            <li class="list-group-item">Отоплення: {{estate.heating}}</li>
+            <li class="list-group-item">Підлога: {{estate.flooring}}</li>
+            <li class="list-group-item">Меблі: {{estate.furniture}}</li>
+            <li class="list-group-item">Ціна: {{estate.price}}</li>
+          </ul>
         </div>
       </div>
     </div>

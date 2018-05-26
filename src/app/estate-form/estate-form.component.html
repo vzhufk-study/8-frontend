@@ -1,124 +1,124 @@
 <div class="container">
-  <h1>Create New Estate: </h1>
+  <h1 *ngIf="!edited"> Створити нову нерухомість: </h1>
+  <h1 *ngIf="edited"> Редагування: </h1>
   <form (ngSubmit)="onSubmit()" #estateForm="ngForm">
     <div class="form-group">
-      <label for="name">Name</label>
+      <label for="name">Назва</label>
       <input type="text" required class="form-control" id="name" [(ngModel)]="model.name" name="name">
-
     </div>
 
     <div class="form-group">
-      <label for="city">City</label>
+      <label for="city">Місто</label>
       <input type="text" required class="form-control" id="city" [(ngModel)]="model.city" name="city">
     </div>
 
     <div class="form-group">
-      <label for="street">Steet</label>
+      <label for="street">Вулиця</label>
       <input type="text" required class="form-control" id="street" [(ngModel)]="model.street" name="street">
     </div>
 
     <div class="form-group">
-      <label for="house">House</label>
+      <label for="house">Будино</label>
       <input type="text" required class="form-control" id="house" [(ngModel)]="model.house" name="house">
     </div>
 
     <div class="form-group">
-      <label for="flat">Flat</label>
+      <label for="flat">Квартира</label>
       <input type="text" required class="form-control" id="flat" [(ngModel)]="model.flat" name="flat">
     </div>
 
     <div class="form-group">
-      <label for="floor">Floor</label>
+      <label for="floor">Поверх</label>
       <input type="number" required class="form-control" id="floor" [(ngModel)]="model.floor" name="floor">
 
     </div>
 
     <div class="form-group">
-      <label for="areaall">All Area</label>
-      <input type="number" required class="form-control" id="areaall" [(ngModel)]="model.areaall" name="areaall">
-    </div>
-
-    <div class="form-group">
-      <label for="house">House</label>
+      <label for="house">Дім</label>
       <input type="text" required class="form-control" id="house" [(ngModel)]="model.house" name="house">
     </div>
 
     <div class="form-group">
-      <label for="housetype">House Type</label>
+      <label for="areaall">Площа</label>
+      <input type="number" required class="form-control" id="areaall" [(ngModel)]="model.areaall" name="areaall">
+    </div>
+
+    <div class="form-group">
+      <label for="housetype">Тип дому</label>
       <select type="text" required class="form-control" id="housetype" [(ngModel)]="model.housetype" name="housetype">
         <option *ngFor="let type of walls" [value]="type">{{type}}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="rooms">Rooms</label>
+      <label for="rooms">Кімнати</label>
       <input type="number" required class="form-control" id="rooms" [(ngModel)]="model.rooms" name="rooms">
     </div>
 
 
     <div class="form-group">
-      <label for="roomstype">Rooms Type</label>
+      <label for="roomstype">Тип кімнат</label>
       <select type="text" required class="form-control" id="roomstype" [(ngModel)]="model.roomstype" name="roomstype">
         <option *ngFor="let type of roomstypes" [value]="type">{{type}}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="arearooms">Rooms Area</label>
+      <label for="arearooms">Площа кімнат</label>
       <input type="number" required class="form-control" id="arearooms" [(ngModel)]="model.arearooms" name="arearooms">
     </div>
 
     <div class="form-group">
-      <label for="areakichen">Area Kichen</label>
-      <input type="number" required class="form-control" id="areakichen" [(ngModel)]="model.areakichen" name="areakichen">
+      <label for="areakitchen">Площа кухні</label>
+      <input type="number" required class="form-control" id="areakitchen" [(ngModel)]="model.areakitchen" name="areakitchen">
     </div>
 
     <div class="form-group">
-      <label for="height">Height</label>
+      <label for="height">Висота</label>
       <input type="number" required class="form-control" id="height" [(ngModel)]="model.height" name="height">
     </div>
 
     <div class="form-group">
-      <label for="layout">Layout</label>
+      <label for="layout">Тип</label>
       <select type="text" required class="form-control" id="layout" [(ngModel)]="model.layout" name="layout">
         <option *ngFor="let type of layouts" [value]="type">{{type}}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="repair">Repair</label>
+      <label for="repair">Ремонт</label>
       <select type="text" required class="form-control" id="repair" [(ngModel)]="model.repair" name="repair">
         <option *ngFor="let type of repairings" [value]="type">{{type}}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="heating">Heating</label>
-      <select type="text" required class="form-control" id="flooring" [(ngModel)]="model.flooring" name="flooring">
+      <label for="heating">Отоплення</label>
+      <select type="text" required class="form-control" id="heating" [(ngModel)]="model.heating" name="heating">
         <option *ngFor="let type of heatings" [value]="type">{{type}}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="flooring">Flooring</label>
+      <label for="flooring">Підлога</label>
       <select type="text" required class="form-control" id="flooring" [(ngModel)]="model.flooring" name="flooring">
         <option *ngFor="let type of floorings" [value]="type">{{type}}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="price">Price</label>
+      <label for="price">Ціна</label>
       <input type="number" required class="form-control" id="price" [(ngModel)]="model.price" name="price">
     </div>
 
     <div class="form-group">
-      <label for="furniture">Furniture</label>
+      <label for="furniture">Меблі</label>
       <select type="text" required class="form-control" id="furniture" [(ngModel)]="model.furniture" name="furniture">
         <option *ngFor="let type of furnitures" [value]="type">{{type}}</option>
       </select>
     </div>
 
-    <button type="submit" class="btn btn-success" [disabled]="!estateForm.form.valid">Submit</button>
+    <button type="submit" class="btn btn-success" [disabled]="!estateForm.form.valid">Зберегти</button>
 
   </form>
 </div>

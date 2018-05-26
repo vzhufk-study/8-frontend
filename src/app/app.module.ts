@@ -3,7 +3,6 @@ import { FormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
-import { EditComponent } from "./edit/edit.component";
 import { ListComponent } from "./list/list.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
@@ -12,11 +11,14 @@ import { HttpClientModule } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
 import { SingleComponent } from "./single/single.component";
 import { EstateFormComponent } from "./estate-form/estate-form.component";
+import { DeleteComponent } from "./delete/delete.component";
 
 const appRoutes: Routes = [
   { path: "estates", component: ListComponent },
   { path: "estates/:id", component: SingleComponent },
   { path: "create", component: EstateFormComponent },
+  { path: "edit/:id", component: EstateFormComponent },
+  { path: "delete/:id", component: DeleteComponent },
   {
     path: "**",
     component: MainComponent
@@ -26,13 +28,13 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    EditComponent,
     ListComponent,
     HeaderComponent,
     FooterComponent,
     MainComponent,
     SingleComponent,
-    EstateFormComponent
+    EstateFormComponent,
+    DeleteComponent
   ],
   imports: [
     RouterModule.forRoot(

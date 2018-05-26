@@ -3,31 +3,31 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <div class="container">
 
-  <input id="search" type="text" placeholder="Search..">
+  <input id="search" type="text" class="form-control" placeholder="Search..">
   <!-- Page Heading -->
-  <h1 class="my-4">
-    <small>Catalog</small>
-  </h1>
   <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" *ngFor="let estate of estates">
       <div class="card h-100">
-        <a href="#">
-          <img class="card-img-top" src="https://picsum.photos/200/300/?random" alt="">
-        </a>
         <div class="card-body">
-          <h4 class="card-title">
-            {{estate.name}}
-            <a href="/estates/{{estate.id}}">More...</a>
-          </h4>
           <p class="card-text">
-            {{estate.description}}
-            <ul>
-              <li>Місто: {{estate.city}}</li>
-              <li>Вулиця: {{estate.street}}</li>
-              <li>Будинок: {{estate.house}}</li>
-              <li>Квартира: {{estate.flat}}</li>
-              <li>Кімнат: {{estate.rooms}}</li>
-              <li>Площа: {{estate.areaall}}</li>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a href="/estates/{{estate.id}}">
+                  #{{estate.id}}
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a href="/estates/{{estate.id}}">
+                  <img class="card-img-top" src="https://picsum.photos/230/300/?random" alt="">
+                </a>
+              </li>
+              <li class="list-group-item">Назва: {{estate.name}}</li>
+              <li class="list-group-item">Місто: {{estate.city}}</li>
+              <li class="list-group-item">Вулиця: {{estate.street}}</li>
+              <li class="list-group-item">Будинок: {{estate.house}}</li>
+              <li class="list-group-item">Квартира: {{estate.flat}}</li>
+              <li class="list-group-item">Кімнат: {{estate.rooms}}</li>
+              <li class="list-group-item">Площа: {{estate.areaall}}</li>
             </ul>
         </div>
       </div>
